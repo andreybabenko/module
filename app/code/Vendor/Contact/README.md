@@ -7,7 +7,7 @@ Module saves messages to database.
 The module requires :
 
 - magento/framework 102.0.*,
-- php ~7.1.3||~7.2.0
+- php ~7.1.3 ||~7.2.0
 
 ### How to use
 

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vendor_Contact::contact" title="Contacts" translate="title" module="Vendor_Contact" sortOrder="10" resource="Vendor_Contact::contact"/>
+        <add id="Vendor_Contact::contact_manage" title="All Contacts" translate="title" module="Vendor_Contact" sortOrder="10" parent="Vendor_Contact::contact" action="vendor_contact/contact/index" resource="Vendor_Contact::manage"/>
+    </menu>
+</config>

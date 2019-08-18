@@ -1,0 +1,17 @@
+{
+    "vendor_contact": {
+        "column": {
+            "entity_id": true,
+            "email": true,
+            "name": true,
+            "telephone": true,
+            "comment": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

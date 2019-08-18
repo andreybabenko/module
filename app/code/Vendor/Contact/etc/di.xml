@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Vendor\Contact\Api\ContactRepositoryInterface"
+                type="Vendor\Contact\Model\ContactRepository" />
+    <preference for="Vendor\Contact\Api\Data\ContactInterface"
+                type="Vendor\Contact\Model\Contact" />
+    <preference for="Vendor\Contact\Model\Manager\ContactManagerInterface"
+                type="Vendor\Contact\Model\Manager\ContactManager" />
+
+    <virtualType name="Vendor\Contact\Model\ResourceModel\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">vendor_contact</argument>
+            <argument name="resourceModel" xsi:type="string">Vendor\Contact\Model\ResourceModel\Contact</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="contact_listing_data_source" xsi:type="string">Vendor\Contact\Model\ResourceModel\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

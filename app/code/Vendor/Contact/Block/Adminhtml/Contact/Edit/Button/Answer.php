@@ -19,7 +19,7 @@ class Answer extends AbstractButton
         $contact = $this->coreRegistry->registry(Contact::REGISTRY_CODE);
         $data = [];
 
-        if ($contact->getId() && $contact->getStatus() == ContactInterface::STATUS_NOT_ANSWERED) {
+        if ($contact->getId() && !$contact->isAnswered()) {
             $data = [
                 'label' => __('Answer'),
                 'class' => 'save primary',

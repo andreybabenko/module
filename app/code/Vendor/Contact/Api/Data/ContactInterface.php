@@ -118,4 +118,9 @@ interface ContactInterface
      * @return $this
      */
     public function setStatus(int $status);
+
+    /**
+     * @return bool
+     */
+    public function isAnswered();
 }

@@ -113,6 +113,11 @@
                     <item name="formElement" xsi:type="string">textarea</item>
                 </item>
             </argument>
+            <settings>
+                <imports>
+                    <link name="disabled">${ $.provider}:data.is_answered</link>
+                </imports>
+            </settings>
         </field>
     </fieldset>
 </form>

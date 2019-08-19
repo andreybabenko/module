@@ -17,13 +17,13 @@ class Status extends AbstractButton
     {
         /* @var ContactInterface $contact*/
         $contact = $this->coreRegistry->registry(Contact::REGISTRY_CODE);
-        $label = $contact->getStatus() == ContactInterface::STATUS_ANSWERED ? 'Set as not answered' : 'Set as answered';
+        $label = $contact->isAnswered() ? 'Set as not answered' : 'Set as answered';
 
         return [
             'label' => __($label),
             'on_click' => sprintf("location.href = '%s';", $this->urlBuilder->getUrl('*/*/changeStatus', [
                 'id' => $contact->getId(),
-                'status' => $contact->getStatus() == ContactInterface::STATUS_ANSWERED ? ContactInterface::STATUS_NOT_ANSWERED : ContactInterface::STATUS_ANSWERED
+                'status' => $contact->isAnswered() ? ContactInterface::STATUS_NOT_ANSWERED : ContactInterface::STATUS_ANSWERED
             ])),
             'sort_order' => 30
         ];

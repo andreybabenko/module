@@ -39,6 +39,8 @@ class Answer extends AbstractContact
             $this->messageManager->addErrorMessage('Answer should not be empty');
         }
 
-        return $result->setPath('*/*/index');
+        return $result->setPath('*/*/edit', [
+            'id' => $contactId
+        ]);
     }
 }

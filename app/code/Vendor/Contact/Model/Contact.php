@@ -141,4 +141,12 @@ class Contact extends \Magento\Framework\Model\AbstractModel implements ContactI
 
         return $this;
     }
+
+    /**
+     * @return bool
+     */
+    public function isAnswered()
+    {
+        return $this->getStatus() == self::STATUS_ANSWERED;
+    }
 }

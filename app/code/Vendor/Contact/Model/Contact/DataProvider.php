@@ -52,6 +52,7 @@ class DataProvider  extends \Magento\Ui\DataProvider\AbstractDataProvider
 
         foreach ($items as $contact) {
             $this->loadedData[$contact->getId()] = $contact->getData();
+            $this->loadedData[$contact->getId()]['is_answered'] = $contact->isAnswered();
         }
 
         return $this->loadedData;
